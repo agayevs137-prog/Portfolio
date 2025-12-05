@@ -1,0 +1,173 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, Arial, sans-serif;
+  background: #ffffff;
+  color: #111;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* HEADER */
+.site-header {
+  background: #0b2545;
+  color: #fff;
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.main-nav {
+  margin-left: auto;
+  display: flex;
+  gap: 1rem;
+}
+
+.main-nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 10px;
+  border-radius: 6px;
+}
+
+.main-nav a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+}
+
+/* HERO SECTION */
+.hero {
+  padding: 40px 0;
+}
+
+.hero .lead {
+  max-width: 70%;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 10px 16px;
+  background: #0b7dd3;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.cta:hover {
+  background: #095fa3;
+}
+
+/* HEADINGS */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+h2 {
+  margin: 20px 0 10px;
+  font-size: 1.4rem;
+}
+
+/* BLOG POSTS */
+.post {
+  padding: 16px 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.meta {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 6px;
+}
+
+/* PROJECT CARDS */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  padding: 16px;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.card h3 {
+  margin-bottom: 6px;
+}
+
+/* FOOTER */
+.site-footer {
+  text-align: center;
+  padding: 20px 0;
+  color: #666;
+  margin-top: 40px;
+}
+
+/* RESPONSIVE MENU */
+@media (max-width: 800px) {
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+  }
+
+  .main-nav {
+    position: fixed;
+    right: 0;
+    top: 60px;
+    width: 220px;
+    height: 0;
+    overflow: hidden;
+    background: #0b2545;
+    flex-direction: column;
+    transition: height .25s ease;
+    padding-left: 10px;
+  }
+
+  .main-nav.open {
+    height: 160px;
+    padding-top: 10px;
+  }
+
+  .hero .lead {
+    max-width: 100%;
+  }
+}
+
+/* Small mobile adjustments */
+@media (max-width: 430px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+}
